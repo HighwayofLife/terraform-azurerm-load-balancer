@@ -23,7 +23,7 @@ resource "azurerm_resource_group" "main" {
 }
 
 module "public-lb" {
-  source              = "git::ssh://git@github.com/terraform-modules/azure_load_balancer"
+  source              = "highwayoflife/terraform-azurerm-load-balancer"
   type                = "Public"
   resource_group_name = azurerm_resource_group.main.name
   prefix              = "terraform-test"
